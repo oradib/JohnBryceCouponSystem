@@ -1,0 +1,22 @@
+<h1>Customer Details</h1>
+<div id="inp">
+  <label for="id">Choose Customer</label><br>
+  <select #type="ngModel" required id="id" name="id" [(ngModel)]="id">
+    <option *ngFor="let c of customers" value="{{c.id}}">{{c.firstName}} {{c.lastName}}</option>
+  </select>
+  <br><input class='button' style="font-size: larger;" type="button" value="GET INFO" (click)='getCustomer()'>
+</div>
+
+<table id="table">
+
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.email}}</td>
+  </tr>
+</table>

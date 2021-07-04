@@ -1,0 +1,68 @@
+form {
+  width: 500px;
+  margin-left: 30%;
+  font-size: large;
+  font-weight: bold;
+  font-style: inherit;
+  position: relative;
+}
+
+select,
+input[type] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #38555f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  min-width: 30%;
+  padding: 10px 18px;
+  min-height: inherit;
+  border: 1px solid #ccc;
+}
+
+.container {
+  padding: 16px;
+}
+
+option {
+  font-size: larger;
+}
+
+span {
+  color: red;
+  position: relative;
+}
+
+/* small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+
+  form {
+    margin-left: 50%;
+  }
+}

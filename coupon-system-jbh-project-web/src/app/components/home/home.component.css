@@ -1,0 +1,24 @@
+div {
+  padding-top: 40px;
+  font-size: xx-large;
+  text-shadow: 2px 2px #273b42;
+}
+a {
+  font-size: xx-large;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+a.active {
+  background-color: #38555f;
+  color: white;
+  margin: 15px;
+}
+a:hover {
+  background-color: #c3e0e5;
+  color: black;
+  cursor: pointer; /* because the logout isn't a link */
+}

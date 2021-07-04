@@ -1,0 +1,29 @@
+<form #formInfo="ngForm" method="post">
+  <div class="imgcontainer">
+    <img src="assets\circle-cropped.png" alt="logo" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="email"><b>Email</b></label><span *ngIf="email.invalid && email.touched"> *</span>
+    <input #email="ngModel" required email type="text" placeholder="Enter Email" name="email" [(ngModel)]="user.email">
+
+
+    <label for="psw"><b>Password</b></label><span *ngIf="pass.invalid && pass.touched"> *</span>
+    <input #pass="ngModel" required type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user.password">
+
+
+    <label for="client-type">Choose a client type: </label><span *ngIf="type.invalid && type.touched"> *</span>
+    <select #type="ngModel" required id="client-type" name="client-type" [(ngModel)]="user.clientType">
+      <option value="Admin">Admin</option>
+      <option value="Company">Company</option>
+      <option value="Customer">Customer</option>
+    </select>
+
+    <button [disabled]="!formInfo.form.valid" type="submit" (click)='login()'>Login</button>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn" routerLink="/home">Cancel</button>
+  </div>
+</form>

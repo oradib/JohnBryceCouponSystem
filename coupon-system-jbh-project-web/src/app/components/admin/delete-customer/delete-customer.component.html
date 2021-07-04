@@ -1,0 +1,10 @@
+<h1>Delete Customer</h1>
+<form action="/action_page.php">
+
+  <label for="id">Choose Customer</label><br>
+  <select #type="ngModel" required id="id" name="id" [(ngModel)]="id">
+    <option *ngFor="let c of customers" value="{{c.id}}">{{c.firstName}} {{c.lastName}}</option>
+  </select>
+
+  <input class='button' style="font-size: larger;" type="button" value="Delete" (click)='deleteCustomer()'>
+</form>

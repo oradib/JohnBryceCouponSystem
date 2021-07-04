@@ -1,0 +1,45 @@
+<form #formInfo="ngForm" action="/action_page.php">
+
+  <h1>Add Coupon</h1>
+
+  <label for="title">Title</label><span *ngIf="title.invalid && title.touched"> *</span>
+  <input #title="ngModel" required type="text" id="title" name="title" placeholder="Coupon title"
+    [(ngModel)]="coupon.title">
+
+  <label for="description">Description</label><span *ngIf="description.invalid && description.touched"> *</span>
+  <input #description="ngModel" required type="text" id="description" name="description" placeholder="description"
+    [(ngModel)]="coupon.description">
+
+  <label for="amount">Amount</label><span *ngIf="amount.invalid && amount.touched"> *</span>
+  <input #amount="ngModel" required type="number" id="amount" name="amount" placeholder="amount"
+    [(ngModel)]="coupon.amount">
+
+  <label for="price">Price</label><span *ngIf="price.invalid && price.touched"> *</span>
+  <input #price="ngModel" required type="number" id="price" name="price" placeholder="price" [(ngModel)]="coupon.price">
+
+  <label for="category-type">Category: </label>
+  <select #category="ngModel" required id="category-type" name="category-type" [(ngModel)]="coupon.category">
+    <option value="Retail">
+      <input name="category-type" [(ngModel)]="coupon.category" required />Retail
+    </option>
+    <option value="Automotive">Automotive</option>
+    <option value="Beauty">Beauty</option>
+    <option value="Food">Food</option>
+    <option value="Health">Health</option>
+    <option value="Hotels">Hotels</option>
+  </select><span *ngIf="category.invalid && category.touched"> *</span><br>
+
+  <label for="startDate">Start Date</label><span *ngIf="startDate.invalid && startDate.touched"> *</span>
+  <input #startDate="ngModel" required type="date" id="startDate" name="startDate" placeholder=""
+    [(ngModel)]="coupon.startDate">
+
+  <label for="endDate">End Date</label><span *ngIf="endDate.invalid && endDate.touched"> *</span>
+  <input #endDate="ngModel" required type="date" id="endDate" name="endDate" placeholder=""
+    [(ngModel)]="coupon.endDate">
+
+  <label for="img">Image Url</label>
+  <input #img="ngModel" type="text" id="img" name="img" placeholder="Image Url" [(ngModel)]="coupon.image">
+
+
+  <button [disabled]="!formInfo.form.valid" type="submit" (click)='addCoupon()'>ADD</button>
+</form>

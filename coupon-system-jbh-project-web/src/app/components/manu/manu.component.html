@@ -1,0 +1,5 @@
+<div class="vertical-menu">
+    <br>
+    <a *ngIf="isLogin$ | async" class="active" routerLink="/{{clientType$ | async}}">MENU</a> <br>
+    <a *ngIf="isLogin$ | async" class="active" (click)="logout()">Log Out</a>
+</div>

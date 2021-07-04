@@ -1,0 +1,10 @@
+<div>
+    <h1>W - E - L - C - O - M - E</h1>
+    <h3>TO COUPON SYSTEM</h3>
+    <img src="assets\coupon-icon.png">
+</div>
+<h2>your one stop shop for all your coupon needs</h2>
+<br>
+<a *ngIf=(showLogin) class="active" routerLink="/login">LOGIN</a>
+<a *ngIf=(!showLogin) class="active" routerLink="/{{userType}}">MENU</a>
+<a id="logout" class="active" *ngIf=(!showLogin) (click)='logout()'>LOG OUT</a>

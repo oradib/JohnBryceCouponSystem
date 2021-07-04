@@ -1,0 +1,10 @@
+<h1>Delete Company</h1>
+<form action="/action_page.php">
+
+  <label for="id">Choose Company</label><br>
+  <select #type="ngModel" required id="id" name="id" [(ngModel)]="id">
+    <option *ngFor="let c of companies" value="{{c.id}}">{{c.name}}</option>
+  </select>
+
+  <input class='button' style="font-size: larger;" type="button" value="Delete" (click)='deleteCompany()'>
+</form>

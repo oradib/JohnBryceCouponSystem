@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "session.max.inactive.interval",
+    "type": "java.lang.String",
+    "description": "A description for 'session.max.inactive.interval'"
+  },
+  {
+    "name": "session.remove.expired.period",
+    "type": "java.lang.String",
+    "description": "A description for 'session.remove.expired.period'"
+  }
+]}

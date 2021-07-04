@@ -1,0 +1,16 @@
+div {
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 0.5px 0.5px 2px #5b8899;
+}
+
+#shadow {
+  font-size: x-large;
+  text-shadow: 2px 2px 5px #5b8899;
+}

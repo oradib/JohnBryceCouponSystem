@@ -1,0 +1,23 @@
+<h1>Update Company</h1>
+<form #formInfo="ngForm" action="/action_page.php">
+
+  <label for="id">Choose Company</label>
+  <select #type="ngModel" required id="id" name="id" [(ngModel)]="company.id">
+    <option *ngFor="let c of companies" value="{{c.id}}">{{c.name}}</option>
+  </select>
+
+  <label for="cname">Company Name</label>
+  <input #cname="ngModel" required type="text" id="cname" name="cname" placeholder="Company name"
+    [(ngModel)]="company.name">
+
+  <label for="email">Email</label><span *ngIf="email.invalid && email.touched"> *</span>
+  <input #email="ngModel" required email type="text" id="email" name="email" placeholder="Email"
+    [(ngModel)]="company.email">
+
+  <label for="password">Password</label><span *ngIf="pass.invalid && pass.touched"> *</span>
+  <input #pass="ngModel" required type="text" id="password" name="password" placeholder="Password"
+    [(ngModel)]="company.password">
+
+  <input [disabled]="!formInfo.form.valid" class='button' style="font-size: larger;" type="button" value="Update"
+    (click)='updateCompany()'>
+</form>

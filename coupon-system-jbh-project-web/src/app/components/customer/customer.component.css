@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+div,
+a {
+  /* background-color: #AEC6CF;  */
+  color: black; /* text */
+  display: block; /*  make the links appear below each other */
+  padding: 12px;
+  text-decoration: none; /* remove underline from links */
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #c3e0e5; /* hover color */
+}
+
+/* float columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #91b2be;
+  box-shadow: #38555f;
+}
+
+/* small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

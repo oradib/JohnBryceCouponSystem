@@ -1,0 +1,9 @@
+<div id="inp">
+  <h1>Purchase Coupons</h1>
+  <div id="inp">
+    <label for="id">Choose Cooupon</label><br><br>
+    <select #type="ngModel" required id="id" name="id" [(ngModel)]="id">
+      <option style="font-size: medium;" *ngFor="let c of coupons" value="{{c.id}}">{{c.title}}</option>
+    </select><br>
+    <input class='button' style="font-size: larger;" type="button" value="PURCHASE" (click)='purchaseCoupon()'>
+    <div>

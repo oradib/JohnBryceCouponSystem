@@ -1,0 +1,12 @@
+<h1>Companies</h1>
+<table id="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let c of company">
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+    </tr>
+</table>

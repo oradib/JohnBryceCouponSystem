@@ -1,0 +1,23 @@
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a,
+button {
+  background-color: #38555f;
+  color: white; /* text */
+  display: block; /* below each other */
+  padding: 12px;
+  text-decoration: none; /* remove underline */
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: 25px;
+  width: 120px;
+}
+
+.active:hover {
+  /* background-color: #C3E0E5; hover color */
+  cursor: pointer; /* because the logout isn't a link */
+}

@@ -1,0 +1,9 @@
+<h1>Delete Coupon</h1>
+<form action="/action_page.php">
+  <label for="id">Choose Cooupon</label><br>
+  <select #type="ngModel" required id="id" name="id" [(ngModel)]="id">
+    <option *ngFor="let c of coupons" value="{{c.id}}">{{c.title}}</option>
+  </select>
+
+  <input class='button' style="font-size: larger;" type="button" value="Delete" (click)='deleteCoupon()'>
+</form>

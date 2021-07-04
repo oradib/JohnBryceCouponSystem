@@ -1,0 +1,37 @@
+label {
+  font-weight: bolder;
+}
+
+select {
+  min-width: 20%;
+  padding: 10px 18px;
+  min-height: inherit;
+  border: 1px solid #ccc;
+}
+
+input[type] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* submit button */
+input[type="button"] {
+  width: 10%;
+  background-color: #38555f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* background color to the submit button on mouse-over */
+input[type="button"]:hover {
+  background-color: #45a049;
+}

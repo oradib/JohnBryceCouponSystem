@@ -1,0 +1,28 @@
+section {
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 13% 80% 7%;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+}
+
+header {
+  grid-column: span 12;
+}
+
+aside {
+  padding-top: 12px;
+  grid-column: span 1;
+}
+
+main {
+  padding: 12px;
+  grid-column: span 10;
+  overflow: auto;
+}
+
+footer {
+  grid-column: span 12;
+  margin-top: auto;
+}
